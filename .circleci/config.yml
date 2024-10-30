@@ -8,12 +8,6 @@ jobs:
     steps:
       - checkout
       - run: npm ci
-      - snyk/install
-      - run:
-          command: snyk version
-          name: Which version of snyk is installed
-      - run:
-          command: snyk test:
+      - snyk/scan:
             fail-on-issues: false
-          name: Run code scan
 workflows: null
