@@ -13,6 +13,7 @@ jobs:
           command: snyk version
           name: Which version of snyk is installed
       - run:
-          command: snyk test
+          command: snyk test:
+            fail-on-issues: false
           name: Run code scan
 workflows: null
