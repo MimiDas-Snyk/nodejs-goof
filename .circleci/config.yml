@@ -1,6 +1,6 @@
 version: '2.1'
 orbs:
-  snyk: snyk/snyk@x.y.z
+  snyk: snyk/snyk@2.2.0
 jobs:
   build:
     docker:
@@ -13,6 +13,6 @@ jobs:
           command: snyk version
           name: Which version of snyk is installed
       - run:
-          command: snyk code test
+          command: snyk test
           name: Run code scan
 workflows: null
